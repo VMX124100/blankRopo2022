@@ -53,7 +53,7 @@
     const getRiskScore = () => {
         $.ajax({
             type: 'GET',
-            url: '/riskscore/'+$('#email').html(),
+            url: 'https://dev.stedi.me/riskscore/'+$('#email').html(),
             success: function(data) {
                 let customerRisk = JSON.parse(data);
                 document.getElementById('score').innerHTML = customerRisk.score;
